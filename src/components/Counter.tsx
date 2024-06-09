@@ -6,8 +6,10 @@ export const Counter = () => {
   return (
     <>
       <div class='text-blue-600'>Counter: {value}</div>
-      <button onClick={() => setValue(value + 1)}>Increment</button>
-      <button onClick={() => setValue(value - 1)}>Decrement</button>
+      <div class='flex gap-3'>
+        <button onClick={() => setValue(value + 1)}>Increment</button>
+        <button onClick={() => setValue(value - 1)}>Decrement</button>
+      </div>
     </>
   )
 }
