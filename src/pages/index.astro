@@ -9,6 +9,6 @@ const { data } = await axios('https://api.github.com/repos/snowpackjs/astro')
 <Layout title='Welcome to Astro.'>
   <main>
     <h1 class='uppercase'>Hello {data.name}</h1>
-    <Counter client:load />
+    <Counter client:visible />
   </main>
 </Layout>
