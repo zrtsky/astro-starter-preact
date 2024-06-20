@@ -3,10 +3,12 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN npm ci
 RUN npm run build
 
-ENV HOST=0.0.0.0
-ENV PORT=4321
-EXPOSE 4321
+# Need to set these in the docker-compose.yml file or in the docker run command
+# ENV HOST=0.0.0.0
+# ENV PORT=...
+# EXPOSE ...
+
 CMD node ./dist/server/entry.mjs
